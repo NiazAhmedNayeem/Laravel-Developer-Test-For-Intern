@@ -11,10 +11,13 @@ class CountryController extends Controller
     public function index(){
         return view('backend.country.index');
     }
+    
+    //For data showing country table with AJAX
     public function data(){
         $countries = Country::all();
         return response()->json($countries);
     }
+
     public function store(Request $request){
         $request->validate([
             'name' => 'required|string|unique:countries,name'
@@ -25,10 +28,12 @@ class CountryController extends Controller
         $country->save();
         return response()->json($country);
     }
+
     public function edit($id){
         $country = Country::find($id);
         return response()->json($country);
     }
+
     public function update(Request $request, $id){
         $request->validate([
             'name' => 'required|string|unique:countries,name,'.$id
@@ -39,5 +44,10 @@ class CountryController extends Controller
         return response()->json($country);
     }
 
+    public function delete($id){
+        $country = Country::find($id);
+        $country->delete();
+        return response()->json($country);
+    }
 
 }

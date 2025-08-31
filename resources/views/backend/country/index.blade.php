@@ -105,7 +105,9 @@
         $.ajaxSetup({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
         });
-        //Ajax table 
+
+
+        //Ajax country table 
         function loadCountries(){
             $.get("{{ route('backend.country.data') }}", function(countries){
                 let rows = '';
@@ -126,6 +128,8 @@
 
         loadCountries();
 
+
+
         //Add country with ajax
         $('#addCountryForm').submit(function(e){
             e.preventDefault();
@@ -134,7 +138,7 @@
             .done(function(res){
                 $('#addCountryModal').modal('hide');
                 $('#addCountryForm')[0].reset();
-                loadCountries();
+                loadCountries(); // table refresh
                 Swal.fire({
                     icon: 'success',
                     title: 'Added',
@@ -153,6 +157,8 @@
             });
         });
 
+
+
         //Show Edit country modal with ajax
         $(document).on('click', '.edit_btn', function(){
             let id = $(this).data('id');
@@ -164,6 +170,7 @@
         });
 
 
+
         //Update country with ajax
         $('#editCountryForm').submit(function(e){
             e.preventDefault();
@@ -172,7 +179,7 @@
             $.post(`/country/update/${id}`, {name:name})
             .done(function(res){
                 $('#editCountryModal').modal('hide');
-                loadCountries();
+                loadCountries(); // table refresh
                 Swal.fire({
                     icon: 'success',
                     title: 'Update',
@@ -190,10 +197,47 @@
                 });
             });
         });
+        
 
 
+        //Delete country with ajax
+        $(document).on('click', '.delete_item', function(){
+            let id = $(this).data('id');
 
-
+            // SweetAlert confirm
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // AJAX DELETE request
+                    $.ajax({
+                        url: `/country/delete/${id}`,
+                        type: 'DELETE',
+                        success: function(res){
+                            loadCountries(); // table refresh
+                            Swal.fire(
+                                'Deleted!',
+                                'Country has been deleted.',
+                                'success'
+                            );
+                        },
+                        error: function(err){
+                            Swal.fire(
+                                'Error!',
+                                'Something went wrong.',
+                                'error'
+                            );
+                        }
+                    });
+                }
+            });
+        });
 
 
     });

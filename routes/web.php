@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
     Route::post('/country/store', [CountryController::class, 'store'])->name('backend.country.store');
     Route::get('/country/edit/{id}', [CountryController::class, 'edit']);
     Route::post('/country/update/{id}', [CountryController::class, 'update']);
+    Route::delete('/country/delete/{id}', [CountryController::class, 'delete']);
 
 //country route start here
 

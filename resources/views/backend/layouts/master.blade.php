@@ -53,7 +53,7 @@
     {{-- Script start Here --}}
     @include('backend.layouts.partials.script')
     {{-- Script End Here --}}
-
+    @yield('scripts')
 </body>
 
 </html>

@@ -11,7 +11,4 @@ class DashboardController extends Controller
         return view('backend.dashboard.index');
     }
 
-    public function country(){
-        return view('backend.dashboard.country');
-    }
 }

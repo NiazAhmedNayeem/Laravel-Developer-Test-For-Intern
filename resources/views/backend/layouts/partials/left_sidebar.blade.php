@@ -5,8 +5,8 @@
             <div class="dashboard__top">
                 <div class="dashboard__top__logo">
                     <a href="index.html">
-                        <img class="main_logo" src="html/assets/img/logo.webp" alt="logo">
-                        <img class="iocn_view__logo" src="html/assets/img/Favicon.png" alt="logo_icon">
+                        <img class="main_logo" src="{{ asset('html/assets/img/logo.webp') }}" alt="logo">
+                        <img class="iocn_view__logo" src="{{ asset('html/assets/img/Favicon.png') }}" alt="logo_icon">
                     </a>
                 </div>
             </div>
@@ -18,8 +18,8 @@
                     <li class="dashboard__bottom__list__item has-children show open active">
                         <a href="javascript:void(0)"><i class="material-symbols-outlined">dashboard</i> <span class="icon_title">Dashboard</span></a>
                         <ul class="submenu">
-                            <li class="dashboard__bottom__list__item selected">
-                                <a href="index.html">Default</a>
+                            <li class="dashboard__bottom__list__item {{ request()->routeIs('backend.dashboard') ? 'selected' : '' }}">
+                                <a href="{{ route('backend.dashboard') }}">Default</a>
                             </li>
                             <li class="dashboard__bottom__list__item">
                                 <a href="#">Country</a>

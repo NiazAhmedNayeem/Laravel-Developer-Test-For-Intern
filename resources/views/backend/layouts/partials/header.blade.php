@@ -6,23 +6,23 @@
     <title>@yield('title')</title>
 
     <!-- favicon -->
-    <link rel=icon href="html/favicons.png" sizes="16x16" type="icon/png">
+    <link rel=icon href="{{ asset('html/favicon.png') }}" sizes="16x16" type="icon/png">
     <!-- animate -->
-    <link rel="stylesheet" href="html/assets/css/animate.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/animate.css') }}">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="html/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/bootstrap.min.css') }}">
     <!-- All Icon -->
-    <link rel="stylesheet" href="html/assets/css/icon.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/icon.css') }}">
     <!-- slick carousel  -->
-    <link rel="stylesheet" href="html/assets/css/slick.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/slick.css') }}">
     <!-- Select2 Css -->
-    <link rel="stylesheet" href="html/assets/css/select2.min.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/select2.min.css') }}">
     <!-- Sweet alert Css -->
-    <link rel="stylesheet" href="html/assets/css/sweetalert.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/sweetalert.css') }}">
     <!-- Flatpickr Css -->
-    <link rel="stylesheet" href="html/assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/flatpickr.min.css') }}">
     <!-- Fancy box Css -->
-    <link rel="stylesheet" href="html/assets/css/fancybox.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/fancybox.css') }}">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="html/assets/css/dashboard.css">
+    <link rel="stylesheet" href="{{ asset('html/assets/css/dashboard.css') }}">
     <!-- dark css -->

@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/dashboard', [App\Http\Controllers\Backend\Dashboard\DashboardController::class, 'index'])
 ->name('backend.dashboard');
 
-
-
 // Route::get('/{page?}', function ($page = null) {
 //     $page = $page ?? 'index.html';
 

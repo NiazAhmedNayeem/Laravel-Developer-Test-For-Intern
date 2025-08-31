@@ -28,7 +28,7 @@
                                                 <div class="dashboard__recentActivities__single">
                                                     <div class="dashboard__recentActivities__single__flex">
                                                         <div class="dashboard__recentActivities__single__thumb">
-                                                            <a href="javascript:void(0)"><img src="html/assets/img/recent_activities/activities1.jpg" alt="activities"></a>
+                                                            <a href="javascript:void(0)"><img src="{{ asset('html/assets/img/recent_activities/activities1.jpg') }}" alt="activities"></a>
                                                         </div>
                                                         <div class="dashboard__recentActivities__single__contents">
                                                             <h6 class="dashboard__recentActivities__single__title"><a href="javascript:void(0)">Gown party wear is sold 01 piece</a></h6>
@@ -41,7 +41,7 @@
                                                 <div class="dashboard__recentActivities__single">
                                                     <div class="dashboard__recentActivities__single__flex">
                                                         <div class="dashboard__recentActivities__single__thumb">
-                                                            <a href="javascript:void(0)"><img src="html/assets/img/recent_activities/activities2.jpg" alt="activities"></a>
+                                                            <a href="javascript:void(0)"><img src="{{ asset('html/assets/img/recent_activities/activities2.jpg') }}" alt="activities"></a>
                                                         </div>
                                                         <div class="dashboard__recentActivities__single__contents">
                                                             <h6 class="dashboard__recentActivities__single__title"><a href="javascript:void(0)">This product is running low on stock</a></h6>
@@ -54,7 +54,7 @@
                                                 <div class="dashboard__recentActivities__single">
                                                     <div class="dashboard__recentActivities__single__flex">
                                                         <div class="dashboard__recentActivities__single__thumb">
-                                                            <a href="javascript:void(0)"><img src="html/assets/img/recent_activities/activities3.jpg" alt="activities"></a>
+                                                            <a href="javascript:void(0)"><img src="{{ asset('html/assets/img/recent_activities/activities3.jpg') }}" alt="activities"></a>
                                                         </div>
                                                         <div class="dashboard__recentActivities__single__contents">
                                                             <h6 class="dashboard__recentActivities__single__title"><a href="javascript:void(0)">This product is added to stock</a></h6>
@@ -67,7 +67,7 @@
                                                 <div class="dashboard__recentActivities__single">
                                                     <div class="dashboard__recentActivities__single__flex">
                                                         <div class="dashboard__recentActivities__single__thumb">
-                                                            <a href="javascript:void(0)"><img src="html/assets/img/recent_activities/activities4.jpg" alt="activities"></a>
+                                                            <a href="javascript:void(0)"><img src="{{ asset('html/assets/img/recent_activities/activities4.jpg') }}" alt="activities"></a>
                                                         </div>
                                                         <div class="dashboard__recentActivities__single__contents">
                                                             <h6 class="dashboard__recentActivities__single__title"><a href="javascript:void(0)">Rafael is moved to Elgine St. Branch</a></h6>
@@ -80,7 +80,7 @@
                                                 <div class="dashboard__recentActivities__single">
                                                     <div class="dashboard__recentActivities__single__flex">
                                                         <div class="dashboard__recentActivities__single__thumb">
-                                                            <a href="javascript:void(0)"><img src="html/assets/img/recent_activities/activities5.jpg" alt="activities"></a>
+                                                            <a href="javascript:void(0)"><img src="{{ asset('html/assets/img/recent_activities/activities5.jpg') }}" alt="activities"></a>
                                                         </div>
                                                         <div class="dashboard__recentActivities__single__contents">
                                                             <h6 class="dashboard__recentActivities__single__title"><a href="javascript:void(0)">Robert F is added in Herbert St. Branch as General Staff</a></h6>
@@ -155,7 +155,7 @@
                                                         <div class="table_customer">
                                                             <div class="table_customer__flex">
                                                                 <div class="table_customer__thumb">
-                                                                    <img src="html/assets/img/customer/customer1.jpg" alt="customer">
+                                                                    <img src="{{ asset('html/assets/img/customer/customer1.jpg') }}" alt="customer">
                                                                 </div>
                                                                 <div class="table_customer__contents">
                                                                     <h6 class="table_customer__title">Naomi Russel</h6>
@@ -166,7 +166,7 @@
                                                     </td>
                                                     <td><span class="table_date">22 Feb 2023</span></td>
                                                     <td><span class="table_price">$446.61</span></td>
-                                                    <td><span class="table_payment"><img src="html/assets/img/payment_method/apple.png" alt=""></span></td>
+                                                    <td><span class="table_payment"><img src="{{ asset('html/assets/img/payment_method/apple.png') }}" alt=""></span></td>
                                                     <td><p class="status_btn completed">Complete</p></td>
                                                     <td>
                                                         <div class="action__icon d-flex">
@@ -194,7 +194,7 @@
                                                         <div class="table_customer">
                                                             <div class="table_customer__flex">
                                                                 <div class="table_customer__thumb">
-                                                                    <img src="html/assets/img/customer/customer2.jpg" alt="customer">
+                                                                    <img src="{{ asset('html/assets/img/customer/customer2.jpg') }}" alt="customer">
                                                                 </div>
                                                                 <div class="table_customer__contents">
                                                                     <h6 class="table_customer__title">Wade Warren</h6>
@@ -205,7 +205,7 @@
                                                     </td>
                                                     <td><span class="table_date">23 Feb 2023</span></td>
                                                     <td><span class="table_price">$928.36</span></td>
-                                                    <td><span class="table_payment"><img src="html/assets/img/payment_method/cash.png" alt=""></span></td>
+                                                    <td><span class="table_payment"><img src="{{ asset('html/assets/img/payment_method/cash.png') }}" alt=""></span></td>
                                                     <td><p class="status_btn in_progress">In Progress</p></td>
                                                     <td>
                                                         <div class="action__icon d-flex">
@@ -233,7 +233,7 @@
                                                         <div class="table_customer">
                                                             <div class="table_customer__flex">
                                                                 <div class="table_customer__thumb">
-                                                                    <img src="html/assets/img/customer/customer3.jpg" alt="customer">
+                                                                    <img src="{{ asset('html/assets/img/customer/customer3.jpg') }}" alt="customer">
                                                                 </div>
                                                                 <div class="table_customer__contents">
                                                                     <h6 class="table_customer__title">Kristin Watson</h6>
@@ -244,7 +244,7 @@
                                                     </td>
                                                     <td><span class="table_date">22 Feb 2023</span></td>
                                                     <td><span class="table_price">$275.43</span></td>
-                                                    <td><span class="table_payment"><img src="html/assets/img/payment_method/google.png" alt=""></span></td>
+                                                    <td><span class="table_payment"><img src="{{ asset('html/assets/img/payment_method/google.png') }}" alt=""></span></td>
                                                     <td><p class="status_btn pending">Pending</p></td>
                                                     <td>
                                                         <div class="action__icon d-flex">
@@ -272,7 +272,7 @@
                                                         <div class="table_customer">
                                                             <div class="table_customer__flex">
                                                                 <div class="table_customer__thumb">
-                                                                    <img src="html/assets/img/customer/customer4.jpg" alt="customer">
+                                                                    <img src="{{ asset('html/assets/img/customer/customer4.jpg') }}" alt="customer">
                                                                 </div>
                                                                 <div class="table_customer__contents">
                                                                     <h6 class="table_customer__title">Kristin Watson</h6>
@@ -283,7 +283,7 @@
                                                     </td>
                                                     <td><span class="table_date">24 Feb 2023</span></td>
                                                     <td><span class="table_price">$275.43</span></td>
-                                                    <td><span class="table_payment"><img src="html/assets/img/payment_method/cash.png" alt=""></span></td>
+                                                    <td><span class="table_payment"><img src="{{ asset('html/assets/img/payment_method/cash.png') }}" alt=""></span></td>
                                                     <td><p class="status_btn cancelled">Canceled</p></td>
                                                     <td>
                                                         <div class="action__icon d-flex">

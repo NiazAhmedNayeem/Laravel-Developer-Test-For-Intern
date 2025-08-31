@@ -25,5 +25,19 @@ class CountryController extends Controller
         $country->save();
         return response()->json($country);
     }
+    public function edit($id){
+        $country = Country::find($id);
+        return response()->json($country);
+    }
+    public function update(Request $request, $id){
+        $request->validate([
+            'name' => 'required|string|unique:countries,name,'.$id
+        ]);
+        $country = Country::find($id);
+        $country->name = $request->name;
+        $country->update();
+        return response()->json($country);
+    }
+
 
 }

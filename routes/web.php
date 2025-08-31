@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Route;
     Route::get('/country', [CountryController::class, 'index'])->name('backend.country');
     Route::get('/country/data', [CountryController::class, 'data'])->name('backend.country.data');
     Route::post('/country/store', [CountryController::class, 'store'])->name('backend.country.store');
-
+    Route::get('/country/edit/{id}', [CountryController::class, 'edit']);
+    Route::post('/country/update/{id}', [CountryController::class, 'update']);
 
 //country route start here
 

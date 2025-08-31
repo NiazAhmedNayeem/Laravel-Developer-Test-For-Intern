@@ -1,9 +1,10 @@
 <?php
 
 use App\Http\Controllers\Backend\Country\CountryController;
+use App\Http\Controllers\Backend\State\StateController;
 use Illuminate\Support\Facades\Route;
 
-///Dashboard Route
+    ///Dashboard Route
     Route::get('/dashboard', [App\Http\Controllers\Backend\Dashboard\DashboardController::class, 'index'])
         ->name('backend.dashboard');
 
@@ -15,7 +16,19 @@ use Illuminate\Support\Facades\Route;
     Route::post('/country/update/{id}', [CountryController::class, 'update']);
     Route::delete('/country/delete/{id}', [CountryController::class, 'delete']);
 
-//country route start here
+
+    //State management route start here
+    Route::get('/state', [StateController::class, 'index'])->name('backend.state');
+    Route::get('/state/data', [StateController::class, 'data'])->name('backend.state.data');
+    Route::post('/state/store', [StateController::class, 'store'])->name('backend.state.store');
+    Route::get('/state/edit/{id}', [StateController::class, 'edit']);
+    Route::post('/state/update/{id}', [StateController::class, 'update']);
+    Route::delete('/state/delete/{id}', [StateController::class, 'delete']);
+    
+
+
+
+
 
 // Route::get('/{page?}', function ($page = null) {
 //     $page = $page ?? 'index.html';

@@ -24,8 +24,8 @@
                             <li class="dashboard__bottom__list__item {{ request()->routeIs('backend.country') ? 'selected' : '' }}">
                                 <a href="{{ route('backend.country') }}">Country</a>
                             </li>
-                            <li class="dashboard__bottom__list__item">
-                                <a href="#">State</a>
+                            <li class="dashboard__bottom__list__item {{ request()->routeIs('backend.state') ? 'selected' : '' }}">
+                                <a href="{{ route('backend.state') }}">State</a>
                             </li>
                             <li class="dashboard__bottom__list__item">
                                 <a href="#">City</a>

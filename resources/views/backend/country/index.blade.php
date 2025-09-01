@@ -13,7 +13,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h5 class="dashboard__card__header__title">All Countries List</h5>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCountryModal">
-                                    Add New Country
+                                  <i class="fa fa-plus"></i>  Add New Country
                                 </button>
                             </div>
 
@@ -55,9 +55,19 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-3">
+                    <div class="mb-1">
                         <label for="country_name" class="form-label">Country Name</label>
-                        <input type="text" name="name" class="form-control" id="country_name" placeholder="Enter country name" required>
+                        <input type="text" name="name" class="form-control" id="country_name" placeholder="Enter country name" >
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="country_status" class="form-label">Status</label>
+                        <select name="stats" id="country_status" class="form-control" >
+                            <option value="">Select Status</option>
+                            <option value="Active" selected>Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -83,7 +93,16 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="edit_country_name" class="form-label">Country Name</label>
-                        <input type="text" name="name" class="form-control" id="edit_country_name" required>
+                        <input type="text" name="name" class="form-control" id="edit_country_name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="edit_country_status" class="form-label">Status</label>
+                        <select name="stats" id="edit_country_status" class="form-control">
+                            <option value="">Select Status</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -134,7 +153,8 @@
         $('#addCountryForm').submit(function(e){
             e.preventDefault();
             let name = $('#country_name').val();
-            $.post("{{ route('backend.country.store') }}", {name:name})
+            let status = $('#country_status').val();
+            $.post("{{ route('backend.country.store') }}", {name:name, status:status})
             .done(function(res){
                 $('#addCountryModal').modal('hide');
                 $('#addCountryForm')[0].reset();
@@ -165,6 +185,7 @@
             $.get(`/country/edit/${id}`, function(res){
                 $('#edit_country_id').val(res.id);
                 $('#edit_country_name').val(res.name);
+                $('#edit_country_status').val(res.status);
                 $('#editCountryModal').modal('show');
             });
         });
@@ -176,7 +197,8 @@
             e.preventDefault();
             let id = $('#edit_country_id').val();
             let name = $('#edit_country_name').val();
-            $.post(`/country/update/${id}`, {name:name})
+            let status = $('#edit_country_status').val();
+            $.post(`/country/update/${id}`, {name:name, status:status})
             .done(function(res){
                 $('#editCountryModal').modal('hide');
                 loadCountries(); // table refresh

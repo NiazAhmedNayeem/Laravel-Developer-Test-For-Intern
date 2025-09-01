@@ -21,11 +21,12 @@ class CountryController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'name' => 'required|string|unique:countries,name'
+            'name' => 'required|string|unique:countries,name',
+            'status' => 'required|in:Active,Inactive',
         ]);
         $country = new Country();
         $country->name = $request->name;
-        $country->status = 'Active';
+        $country->status = $request->status;
         $country->save();
         return response()->json($country);
     }
@@ -37,10 +38,12 @@ class CountryController extends Controller
 
     public function update(Request $request, $id){
         $request->validate([
-            'name' => 'required|string|unique:countries,name,'.$id
+            'name' => 'required|string|unique:countries,name,'.$id,
+            'status' => 'required|in:Active,Inactive',
         ]);
         $country = Country::find($id);
         $country->name = $request->name;
+        $country->status = $request->status;
         $country->update();
         return response()->json($country);
     }

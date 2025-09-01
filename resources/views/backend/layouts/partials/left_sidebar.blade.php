@@ -27,12 +27,12 @@
                             <li class="dashboard__bottom__list__item {{ request()->routeIs('backend.state') ? 'selected' : '' }}">
                                 <a href="{{ route('backend.state') }}">State</a>
                             </li>
-                            <li class="dashboard__bottom__list__item">
-                                <a href="#">City</a>
+                            <li class="dashboard__bottom__list__item {{ request()->routeIs('backend.city') ? 'selected' : '' }}">
+                                <a href="{{ route('backend.city') }}">City</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="dashboard__bottom__list__item has-children">
+                    {{-- <li class="dashboard__bottom__list__item has-children">
                         <a href="basic_form.html"><span class="icon_title">Form</span></a>
                     </li>
                     <li class="dashboard__bottom__list__item has-children">
@@ -57,7 +57,7 @@
                     </li>
                     <li class="dashboard__bottom__list__item">
                         <a href="javascript:void(0)"><i class="material-symbols-outlined">logout</i> <span class="icon_title">Log Out</span></a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>

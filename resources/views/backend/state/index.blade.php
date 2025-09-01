@@ -131,7 +131,7 @@
                     rows += `<tr>
                         <td>${index+1}</td>
                         <td>${state.name}</td>
-                        <td>${state.country.name}</td>
+                        <td>${state.country ? state.country.name : ''}</td>
                         <td>
                             <a href="javascript:void(0)" class="btn btn-primary btn-sm edit_btn" data-id="${state.id}">Edit</a>
                             <a href="javascript:void(0)" class="btn btn-danger btn-sm delete delete_item" data-id="${state.id}">Delete</a>
